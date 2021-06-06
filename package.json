@@ -1,0 +1,19 @@
+{
+  "name": "@birch/dataflow",
+  "version": "1.0.0",
+  "description": "Manage end-to-end data flow in a react application.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "state",
+    "management",
+    "data",
+    "flow"
+  ],
+  "author": "",
+  "license": "ISC"
+}
