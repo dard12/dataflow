@@ -1,6 +1,6 @@
 {
   "name": "react-data-manager",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Data flow management for react applications.",
   "main": "index.ts",
   "scripts": {

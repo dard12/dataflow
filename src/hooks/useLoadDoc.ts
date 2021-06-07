@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { useDocListSelector, useDocSelector } from '../redux/selectors';
+import { useDocList, useDoc } from '../redux/selectors';
 import { useAxiosGet } from './useAxios';
 
 export const useLoadDoc = ({
@@ -14,7 +14,7 @@ export const useLoadDoc = ({
   query?: any;
 }) => {
   const dispatch = useDispatch();
-  const doc = useDocSelector({ collection, id });
+  const doc = useDoc({ collection, id });
   const fetchResult = useAxiosGet(`/api/${collection}`, query || { id }, {
     name: `${name} | ${collection} | ${id}`,
     reloadOnChange: true,
@@ -39,7 +39,7 @@ export const useLoadDocList = ({
   order?: any;
 }) => {
   const dispatch = useDispatch();
-  const docs = useDocListSelector({ collection, filter, order });
+  const docs = useDocList({ collection, filter, order });
   const fetchResult = useAxiosGet(`/api/${collection}`, query, {
     name: `${name} | ${collection} | List`,
     reloadOnChange: true,
