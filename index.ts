@@ -19,6 +19,8 @@ import {
 
 import { loginAction, logoutAction, loadDocsAction } from './src/redux/actions';
 
+import store from './src/redux/store';
+
 import {
   GetQuery,
   execute,
@@ -50,6 +52,8 @@ export {
   loginAction,
   logoutAction,
   loadDocsAction,
+  // store
+  store,
   // src-server
   GetQuery,
   execute,
