@@ -2,6 +2,7 @@ import axios, {
   axiosInit,
   axiosDelete,
   axiosGet,
+  axiosPost,
   useAxiosGet,
 } from './src/hooks/useAxios';
 
@@ -32,6 +33,7 @@ export {
   axiosInit,
   axiosDelete,
   axiosGet,
+  axiosPost,
   useAxiosGet,
   // useLoadDoc
   useLoadDoc,
