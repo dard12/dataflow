@@ -10,14 +10,14 @@ function persistLogin() {
   const { token, id, username } = store.getState().login;
 
   if (token && id && username) {
-    localStorage.setItem('token', token);
-    localStorage.setItem('id', id);
-    localStorage.setItem('username', username);
+    window.localStorage.setItem('token', token);
+    window.localStorage.setItem('id', id);
+    window.localStorage.setItem('username', username);
     axios.defaults.headers.common.Authorization = `Bearer ${token}`;
   } else {
-    localStorage.removeItem('token');
-    localStorage.removeItem('id');
-    localStorage.removeItem('username');
+    window.localStorage.removeItem('token');
+    window.localStorage.removeItem('id');
+    window.localStorage.removeItem('username');
     axios.defaults.headers.common.Authorization = null;
   }
 }

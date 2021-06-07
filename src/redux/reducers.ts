@@ -8,9 +8,9 @@ export const loginReducer = createReducer<{
   username: string | null;
 }>(
   {
-    token: localStorage.getItem('token'),
-    id: localStorage.getItem('id'),
-    username: localStorage.getItem('username'),
+    token: window.localStorage.getItem('token'),
+    id: window.localStorage.getItem('id'),
+    username: window.localStorage.getItem('username'),
   },
   {
     [loginAction.type]: (state, action) => {
