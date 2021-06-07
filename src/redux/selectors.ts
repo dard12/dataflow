@@ -57,15 +57,15 @@ export const useIsMyself = (user?: string) => {
   return Boolean(user && user === loggedInUser);
 };
 
-export const useUserSelector = () => {
+export const useUser = () => {
   return useSelector(userSelector);
 };
 
-export const useUsernameSelector = () => {
+export const useUsername = () => {
   return useSelector(usernameSelector);
 };
 
-export const useDocSelector = ({
+export const useDoc = ({
   collection,
   id,
 }: {
@@ -75,7 +75,7 @@ export const useDocSelector = ({
   return useSelector(createDocSelector({ collection, id }));
 };
 
-export const useDocListSelector = ({
+export const useDocList = ({
   collection,
   filter,
   order,

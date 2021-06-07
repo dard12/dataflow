@@ -7,14 +7,13 @@ import axios, {
 } from './src/hooks/useAxios';
 
 import { useLoadDoc, useLoadDocList } from './src/hooks/useLoadDoc';
-import { useUsername } from './src/hooks/useUsername';
 
 import {
   useIsMyself,
-  useUserSelector,
-  useUsernameSelector,
-  useDocSelector,
-  useDocListSelector,
+  useUser,
+  useUsername,
+  useDoc,
+  useDocList,
 } from './src/redux/selectors';
 
 import { loginAction, logoutAction, loadDocsAction } from './src/redux/actions';
@@ -40,14 +39,12 @@ export {
   // useLoadDoc
   useLoadDoc,
   useLoadDocList,
-  // useUsername
-  useUsername,
   // selectors
   useIsMyself,
-  useUserSelector,
-  useUsernameSelector,
-  useDocSelector,
-  useDocListSelector,
+  useUser,
+  useUsername,
+  useDoc,
+  useDocList,
   // actions
   loginAction,
   logoutAction,
