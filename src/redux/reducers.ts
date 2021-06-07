@@ -2,17 +2,11 @@ import _ from 'lodash';
 import { createReducer } from '@reduxjs/toolkit';
 import { loginAction, logoutAction, loadDocsAction } from './actions';
 
-interface LoginInterface {
+export const loginReducer = createReducer<{
   token: string | null;
   id: string | null;
   username: string | null;
-}
-
-interface CollectionsInterface {
-  [collection: string]: { [docId: string]: any };
-}
-
-export const loginReducer = createReducer<LoginInterface>(
+}>(
   {
     token: localStorage.getItem('token'),
     id: localStorage.getItem('id'),
@@ -34,7 +28,9 @@ export const loginReducer = createReducer<LoginInterface>(
   },
 );
 
-export const collectionsReducer = createReducer<CollectionsInterface>(
+export const collectionsReducer = createReducer<{
+  [collection: string]: { [docId: string]: any };
+}>(
   {},
   {
     [loadDocsAction.type]: (state, action) => {
