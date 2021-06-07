@@ -1,7 +1,23 @@
 import { QueryBuilder } from 'knex';
 import _ from 'lodash';
 import { Response } from 'express';
-import { QueryOptions, UpdateResponse } from './server-util.d';
+
+interface QueryOptions {
+  page?: number;
+  pageSize?: number;
+}
+
+export interface GetQuery<Doc, AdditionalFields = {}> {
+  query: Partial<Doc> & QueryOptions & AdditionalFields;
+  user?: any;
+}
+
+interface UpdateResponse {
+  docs: any[];
+  collection: string;
+  page?: number;
+  next?: number[] | null;
+}
 
 export async function execute(
   pgQuery: QueryBuilder,

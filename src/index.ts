@@ -4,9 +4,9 @@ import axios, {
   axiosGet,
   axiosPost,
   useAxiosGet,
-} from './src/hooks/useAxios';
+} from './hooks/useAxios';
 
-import { useLoadDoc, useLoadDocList } from './src/hooks/useLoadDoc';
+import { useLoadDoc, useLoadDocList } from './hooks/useLoadDoc';
 
 import {
   useIsMyself,
@@ -14,11 +14,11 @@ import {
   useUsername,
   useDoc,
   useDocList,
-} from './src/redux/selectors';
+} from './redux/selectors';
 
-import { loginAction, logoutAction, loadDocsAction } from './src/redux/actions';
+import { loginAction, logoutAction, loadDocsAction } from './redux/actions';
 
-import store from './src/redux/store';
+import store from './redux/store';
 
 import {
   GetQuery,
@@ -26,7 +26,7 @@ import {
   sendUpdate,
   sendError,
   sendSuccess,
-} from './src-server/server-util';
+} from './server-util';
 
 export {
   // useAxios
@@ -52,9 +52,10 @@ export {
   // store
   store,
   // src-server
-  GetQuery,
   execute,
   sendUpdate,
   sendError,
   sendSuccess,
 };
+
+export type { GetQuery };
