@@ -1,0 +1,15 @@
+*.DS_Store
+/node_modules/*
+/packages/*
+/build/*
+/build-server/*
+/prod-client/*
+/prod-server/*
+src/**/*.css
+csv/*
+*.env
+*.sql
+*.exe
+*.pyc
+*.py~
+venv/
